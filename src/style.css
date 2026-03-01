@@ -1,0 +1,70 @@
+:root {
+  color-scheme: dark;
+  --glass: rgba(10, 12, 22, 0.58);
+  --edge: rgba(255, 255, 255, 0.16);
+}
+
+* { box-sizing: border-box; }
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 20%, #101326 0%, #07080f 60%, #04050a 100%);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+#view {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none; /* HUD owns interaction for now */
+}
+
+#hud {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 20;
+  pointer-events: auto;
+  display: grid;
+  gap: 8px;
+  max-width: min(560px, calc(100vw - 28px));
+  padding: 12px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  background: var(--glass);
+  border: 1px solid var(--edge);
+  color: #eff1ff;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+#hud .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+#hud code { color: #8de2ff; }
+#hud label { display: inline-flex; gap: 6px; align-items: center; }
+#hud input[type="range"] { width: 110px; }
+button {
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: #f5f8ff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+button:hover { background: rgba(255,255,255,0.14); }
+button:active { transform: translateY(1px); }
+
+.warn {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #07080f;
+  padding: 24px;
+  text-align: center;
+}
