@@ -1,47 +1,55 @@
 # Evo Lumen Life 🧬🌊
 
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](#)
+[![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?logo=vite&logoColor=white)](#)
+[![Status](https://img.shields.io/badge/status-experimental-ffb347)](#)
+
 A cross-platform artificial-life sandbox where soft-bodied organisms swim, hunt, reproduce, and evolve in real time.
 
-![Evo Lumen Life preview](docs/evo-lumen-life.gif)
+> **Tagline:** *Not a reset-heavy sim. A living reef with overlapping generations, pressure, adaptation, and weird surprises.*
 
 ---
 
 ## Why this exists
 
-Most “life sims” either feel too abstract (pure cellular automata) or too rigid (hard generation swaps).
+Most life sims fall into one of two traps:
+1. too abstract to feel alive,
+2. too rigid to feel emergent.
 
-This project aims for something more **alive**:
-- continuous overlapping lifecycles,
-- visible ecological pressure,
-- emergent species behavior,
-- and a scene that is fun to watch, not jarring.
+**Evo Lumen Life** is designed to sit in the middle:
+- continuous lifecycles,
+- visible ecology,
+- editable species behavior,
+- and a scene that stays watchable for long sessions.
 
 ---
 
-## What we built
+## What’s in the tank right now
 
-### 1) Continuous ecosystem (no hard generation resets)
-Organisms now age, reproduce, and die asynchronously. Population turnover is fluid.
+### Continuous ecosystem (no hard generation swaps)
+Organisms age, reproduce, and die asynchronously. Population turnover is gradual and overlapping.
 
-### 2) Reproduction modes
-- **Sexual reproduction** (crossover + mutation)
-- **Asexual reproduction** (mutated clone/split)
-- **Worms lay eggs**; eggs drift, hatch, and hatchlings grow over time
+### Reproduction modes
+- Sexual reproduction (crossover + mutation)
+- Asexual reproduction (mutated split/clone)
+- Worms lay eggs that drift, hatch, and grow over time
 
-### 3) Trophic dynamics
+### Trophic behavior
 - Prey forage micro food particles
 - Predators chase prey
-- Prey flee and use edge refuge behavior under stress
-- Predation is gradual (struggle + consumption), not instant binary deletion
+- Prey flee and seek edge refuge under stress
+- Predation is struggle + gradual consumption (not instant delete)
 
-### 4) Visual ecology
+### Visual ecology
 - Multi-form organisms: worms, flagellates, protozoa, virus-like agents
-- Tiny drifting food particles with local fluid disturbance
-- Corpses/remains fade instead of hard-disappearing
-- Worm swim animation tuned toward lateral tail-swish motion
+- Tiny drifting nutrient particles with local flow disturbance
+- Corpses/remains fade out instead of hard-disappearing
+- Worm swimming motion tuned for lateral tail swish
 
-### 5) Species controls that can evolve with the world
-Species list is generated from currently existing lineages. You can pick a species and tune:
+### Dynamic species controls
+The species list is generated from lineages currently alive in the simulation.
+
+For any selected species, you can tune live:
 - prey drive
 - speed
 - mobility
@@ -52,7 +60,7 @@ As new lineages appear, the list updates.
 
 ---
 
-## Run locally
+## Quick start
 
 ```bash
 cd ~/projects/evo-lumen-life
@@ -60,23 +68,32 @@ npm install
 npm run dev
 ```
 
-Open the local URL shown by Vite.
+Then open the local URL printed by Vite.
 
 ---
 
 ## Controls
 
-Global:
+### Global
 - Pause / Resume
 - Show Champion / Show Ecosystem
 - New Genesis
 - Export Champion
-- Time, Evolution, Drift sliders
+- Time / Evolution / Drift sliders
 
-Species tuning:
-- Select an active species from dropdown
-- Adjust prey drive, speed, mobility, aggression, attractiveness
+### Species tuning
+- Choose an active species from dropdown
+- Adjust behavior traits
 - Changes apply immediately
+
+---
+
+## Project goals
+
+- Make artificial life that is **fun to watch**.
+- Make behavior modifications **immediate and tactile**.
+- Keep the stack **portable** (Mac/Linux/Windows browser-first).
+- Let novelty emerge from pressure, not scripted choreography.
 
 ---
 
@@ -84,23 +101,22 @@ Species tuning:
 
 - TypeScript
 - Vite
-- Canvas 2D renderer (portable + reliable across Mac/Linux/Windows browsers)
+- Canvas 2D renderer (chosen for portability and reliability)
 
 ---
 
 ## Roadmap ideas
 
 - lineage tree + speciation timeline
-- courtship/mate-competition animations
-- egg predation and guarding strategies
-- camera focus/follow tools for “documentary mode”
-- trait persistence and saved worlds
+- mating pursuit / courtship behavior
+- egg predation and guarding
+- scavenger niche around remains
+- camera follow / documentary mode
+- save + replay worlds
 
 ---
 
 ## Try it, break it, evolve it
 
-If you like emergent systems, this is your playground.
-Fork it, tweak species pressure, and see what kind of life emerges.
-
-If you discover a weird new behavior pattern, open an issue with a clip — those are the best part.
+If you enjoy emergent systems, this is your playground.
+Fork it, push it too far, and share the weird species that appear.
