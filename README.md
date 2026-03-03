@@ -6,6 +6,8 @@
 
 A cross-platform artificial-life sandbox where soft-bodied organisms swim, hunt, reproduce, and evolve in real time.
 
+**Live demo:** https://evo-lumen-life.vercel.app
+
 > **Tagline:** *Not a reset-heavy sim. A living reef with overlapping generations, pressure, adaptation, and weird surprises.*
 
 ---
